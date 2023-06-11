@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191923;
+}
+
+.blankArea {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 1s;
+}
+
+.blankArea.show {
+    opacity: 1;
+    z-index: 5;
+}
+
+.headImage {
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.headImage.show {
+    z-index: 5;
+    opacity: 1;
+}
+
+main {
+    position: fixed;
+    top: 3%;
+    bottom: 3%;
+    width: 97%;
+    height: 94%;
+}
+
+/* left side sterts */
+
+.leftSide {
+    background-color: rgba(36, 36, 47, 9);
+    width: 23%;
+    height: inherit;
+    position: fixed;
+}
+
+.leftSide > header {
+    height: 40%;
+    background-color: #23232f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSide > header > img:first-child {
+    margin-bottom: 100px;
+    width: 100px;
+}
+
+.leftSide > header > .magnifier {
+    width: 40px;
+    position: fixed;
+    top: 12%;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.leftSide > header > .magnifier.show {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.leftSide > header > strong {
+    font-family: "Poppins",sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    position: fixed;
+    margin-top: 40px;
+    color: white;
+    transition: all .5s;
+    cursor: default;
+}
+
+.leftSide > header > strong:hover {
+    color: #ffc107;
+}
+
+.leftSide > header > pre {
+    position: fixed;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: .3px;
+    color: rgb(140, 140, 142);
+    margin-top: 150px;
+    margin-left: -85px;
+}
+
+.leftSide > main {
+    width: inherit;
+    height: 100%;
+    position: fixed;
+    top: 40%;
+    background-color: #20202a;
+}
+
+.leftSide > main > section {
+    padding: 30px 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li > h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: .4px;
+    color: white;
+    float: left;
+
+}
+
+li > span {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: .4px;
+    color: rgb(140, 140, 142);
+    float: right;
+}
+
+main > section > hr {
+    margin-top: 40px;
+    width: 80%;
+    margin: 40px auto;
+    opacity: .3;
+    color: rgb(140, 140, 142);
+}
+
+.leftSide > footer {
+    background-color: rgba(34, 34, 45, 9);
+    width: inherit;
+    height: 15%;
+}
+
+/* middle side starts */
+
