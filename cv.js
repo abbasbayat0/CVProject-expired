@@ -26,6 +26,8 @@ profileImages.forEach(profileImage => {
     })
 })
 
+// progress circules
+
 let progressCirculeOne = document.querySelector(".progressOne"),
     progressCirculeTwo = document.querySelector(".progressTwo"),
     progressOne = document.querySelector(".pOne"),

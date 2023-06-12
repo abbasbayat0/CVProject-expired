@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -72,7 +73,8 @@ main {
 
 .leftSide > header > img:first-child {
     margin-bottom: 100px;
-    width: 100px;
+    margin-top: 10px;
+    width: 120px;
 }
 
 .leftSide > header > .magnifier {
@@ -93,7 +95,7 @@ main {
     font-weight: 450;
     font-size: 15px;
     position: fixed;
-    margin-top: 40px;
+    margin-top: 80px;
     color: white;
     transition: all .5s;
     cursor: default;
@@ -110,7 +112,7 @@ main {
     font-size: 13px;
     letter-spacing: .2px;
     color: rgb(140, 140, 142);
-    margin-top: 150px;
+    margin-top: 200px;
     margin-left: -85px;
 }
 
@@ -120,11 +122,15 @@ main {
     position: fixed;
     top: 45%;
     background-color: #20202a;
+    overflow: scroll;
+}
 
+.leftSide > main::-webkit-scrollbar {
+    display: none;
 }
 
 .leftSide > main > section {
-    padding: 30px 15px;
+    padding: 30px 10%;
 }
 
 ul {
@@ -150,20 +156,25 @@ li > span {
     float: right;
 }
 
-main > section > hr {
+main > section > .firstHr {
     margin-top: 40px;
-    width: 80%;
+    width: 90%;
     margin: 40px auto;
     opacity: .3;
     color: rgb(140, 140, 142);
 }
 
+main > .languages {
+    position: relative;
+}
+
 main > section > .container {
+    width: 90%;
+    position: absolute;
+    top: -80%;
+    left: 5%;
     display: flex;
     justify-content: space-around;
-    position: absolute;
-    top: 65%;
-    left: 25%;
 }
 
 section > .container > .progressOne,
@@ -182,8 +193,10 @@ section > .container > .progressOne::before,
 section > .container > .progressTwo::before {
     content: "";
     position: absolute;
-    width: 65px;
-    height: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
     background-color: #20202a;
     border-radius: 50%;
 }
@@ -194,6 +207,87 @@ div > span {
     font-weight: 500;
     letter-spacing: .3px;
 }
+
+div > .title {
+    color: white;
+    position: absolute;
+    top: 110%;
+    font-family: "poppins", sans-serif;
+    font-size: 13px;
+    letter-spacing: .3px;
+}
+
+.secondHr {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+    width: 75%;
+    opacity: .3;
+    color: rgb(140, 140, 142);
+}
+
+.abilities {
+    font-family: "poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .3px;
+    margin-top: 20px;
+}
+
+.abilities > .title {
+    position: absolute;
+    left: 12%;
+    color: #c4c4c7;
+    margin-top: -25px;
+}
+
+.abilities > .percent {
+    position: absolute;
+    right: 12%;
+    color: #848487;
+    margin-top: -25px;
+}
+
+.abilities > .progressBar {
+    width: 94%;
+    height: 5px;
+    background-color: #191923;
+    border-radius: 5px;
+    margin: 0 auto 55px auto;
+}
+
+.abilities > .python::after,
+.abilities > .matlab::after,
+.abilities > .photoshop::after,
+.abilities > .arduino::after {
+    content: "";
+    width: 37%;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #ffc107;
+}
+
+.abilities > .deep::after {
+    content: "";
+    width: 66.6%;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #ffc107;
+}
+
+.abilities > .raspberry::after,
+.abilities > .siemens::after {
+    content: "";
+    width: 74%;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    background-color: #ffc107;
+}
+
 
 .leftSide > footer {
     background-color: rgba(34, 34, 45, 9);
