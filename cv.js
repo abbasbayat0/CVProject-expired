@@ -1,7 +1,7 @@
-let magnifier = document.querySelector(".magnifier");
-let profileImages = document.querySelectorAll(".clickable");
-let blankArea = document.querySelector(".blankArea");
-let headImage = document.querySelector(".headImage");
+let magnifier = document.querySelector(".magnifier"),
+    profileImages = document.querySelectorAll(".clickable"),
+    blankArea = document.querySelector(".blankArea"),
+    headImage = document.querySelector(".headImage");
 
 // left side starts
 
@@ -25,3 +25,30 @@ profileImages.forEach(profileImage => {
         }
     })
 })
+
+let progressCirculeOne = document.querySelector(".progressOne"),
+    progressCirculeTwo = document.querySelector(".progressTwo"),
+    progressOne = document.querySelector(".pOne"),
+    progressTwo = document.querySelector(".pTwo");
+
+let startValueTwo = 0,
+    endValueTwo = 90;
+let secondProgress = setInterval(() => {
+    startValueTwo ++;
+    progressTwo.textContent = startValueTwo + "%";
+    progressCirculeTwo.style.background = `conic-gradient(#ffc107 ${startValueTwo * 3.6}deg, #191923 0deg)`
+    if (startValueTwo == endValueTwo) {
+        clearInterval(secondProgress)
+    }
+}, 10);
+
+let startValueOne = 0,
+    endValueOne = 100;
+let firstProgress = setInterval(() => {
+    startValueOne ++;
+    progressOne.textContent = startValueOne + "%";
+    progressCirculeOne.style.background = `conic-gradient(#ffc107 ${startValueOne * 3.6}deg, #191923 0deg)`
+    if (startValueOne == endValueOne) {
+        clearInterval(firstProgress)
+    }
+}, 10);

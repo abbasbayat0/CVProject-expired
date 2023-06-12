@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -88,7 +90,7 @@ main {
 
 .leftSide > header > strong {
     font-family: "Poppins",sans-serif;
-    font-weight: 700;
+    font-weight: 450;
     font-size: 15px;
     position: fixed;
     margin-top: 40px;
@@ -106,7 +108,7 @@ main {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 13px;
-    letter-spacing: .3px;
+    letter-spacing: .2px;
     color: rgb(140, 140, 142);
     margin-top: 150px;
     margin-left: -85px;
@@ -114,10 +116,11 @@ main {
 
 .leftSide > main {
     width: inherit;
-    height: 100%;
+    height: 40%;
     position: fixed;
-    top: 40%;
+    top: 45%;
     background-color: #20202a;
+
 }
 
 .leftSide > main > section {
@@ -153,6 +156,43 @@ main > section > hr {
     margin: 40px auto;
     opacity: .3;
     color: rgb(140, 140, 142);
+}
+
+main > section > .container {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 65%;
+    left: 25%;
+}
+
+section > .container > .progressOne,
+section > .container > .progressTwo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: conic-gradient(#ffc107 3.6deg, #191923 0deg);
+    border-radius: 50%;
+} 
+
+section > .container > .progressOne::before,
+section > .container > .progressTwo::before {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background-color: #20202a;
+    border-radius: 50%;
+}
+
+div > span {
+    position: relative;
+    color: rgb(202, 202, 206);
+    font-weight: 500;
+    letter-spacing: .3px;
 }
 
 .leftSide > footer {
