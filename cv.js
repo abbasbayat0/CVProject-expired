@@ -54,3 +54,14 @@ let firstProgress = setInterval(() => {
         clearInterval(firstProgress)
     }
 }, 10);
+
+// progress bar
+
+let main = document.querySelector(".mainInMain"),
+    progressBars = document.querySelectorAll(".progressBar");
+
+main.addEventListener("scroll", e => {
+    progressBars.forEach(progressBar => {
+        progressBar.classList.add("show")
+    })
+})

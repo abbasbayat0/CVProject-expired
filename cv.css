@@ -158,7 +158,7 @@ li > span {
 
 main > section > .firstHr {
     margin-top: 40px;
-    width: 90%;
+    width: 98%;
     margin: 40px auto;
     opacity: .3;
     color: rgb(140, 140, 142);
@@ -222,7 +222,7 @@ div > .title {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 40px;
-    width: 75%;
+    width: 80%;
     opacity: .3;
     color: rgb(140, 140, 142);
 }
@@ -262,32 +262,79 @@ div > .title {
 .abilities > .photoshop::after,
 .abilities > .arduino::after {
     content: "";
-    width: 37%;
+    width: 0;
     height: 5px;
     border-radius: 5px;
     position: absolute;
     background-color: #ffc107;
+    transition: all 1s .5s;
+}
+
+.abilities > .python.show::after,
+.abilities > .matlab.show::after,
+.abilities > .photoshop.show::after,
+.abilities > .arduino.show::after {
+    width: 37%;
 }
 
 .abilities > .deep::after {
     content: "";
-    width: 66.6%;
+    width: 0;
     height: 5px;
     border-radius: 5px;
     position: absolute;
     background-color: #ffc107;
+    transition: all 1s .5s;
+}
+
+.abilities > .deep.show::after {
+    width: 66.6%;
 }
 
 .abilities > .raspberry::after,
 .abilities > .siemens::after {
     content: "";
-    width: 74%;
+    width: 0;
     height: 5px;
     border-radius: 5px;
     position: absolute;
     background-color: #ffc107;
+    transition: all 1s .5s;
 }
 
+.abilities > .raspberry.show::after,
+.abilities > .siemens.show::after {
+    width: 74%;
+}
+
+.thirdHr {  
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin-top: -10px;
+    opacity: .3;
+    color: rgb(140, 140, 142);
+}
+
+section > .ticks {
+    margin-top: -5%;
+    position: absolute;
+    left: 12%;
+}
+
+section > .ticks > img {
+    width: 15px;
+    margin-bottom: 40px;
+}
+
+section > .ticks > p {
+    color: #c4c4c7;
+    font-family: "poppins", sans-serif;
+    font-size: 14px;
+    margin-top: -22%;
+    margin-left: 15%;
+}
 
 .leftSide > footer {
     background-color: rgba(34, 34, 45, 9);
