@@ -180,6 +180,10 @@ main > section > .container {
 section > .container > .progressOne,
 section > .container > .progressTwo {
     position: relative;
+    font-family: "poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,7 +344,19 @@ section > .ticks > p {
     background-color: rgba(34, 34, 45, 9);
     width: inherit;
     height: 15%;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
 }
+
+.leftSide > footer > a > img {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 5%;
+}
+
+
 
 /* middle side starts */
 
