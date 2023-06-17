@@ -489,7 +489,7 @@ footer > h2:first-child {
     padding: 40px 20px;
 }
 
-.interests > p > span {
+article > p > span {
     color: #717175;
 }
 
@@ -508,7 +508,7 @@ footer > h2:first-child {
 }
 
 .experience > section > ul {
-    padding: 40px 20px;
+    padding: 10px 20px 20px 20px;
 }
 
 .experience > section > ul > li {
@@ -522,6 +522,56 @@ footer > h2:first-child {
     color: #ffc107;
     position: absolute;
     bottom: 20px;
+}
+
+.experience > section > p > span {
+    color: #717175;
+}
+
+.experience > section > p {
+    margin-bottom: 30px;
+}
+
+.publication > section {
+    font-family: "poppins", sans-serif;
+    font-size: 13px;
+    letter-spacing: .3px;
+    color: #fbfbfb;
+    width: 98%;
+    border-radius: 5px;
+    background-color: #2b2b36;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 40px 20px;
+    position: relative;
+
+}
+
+.publication > section > p > span {
+    color: #717175;
+}
+
+footer > .author {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c2c37;
+    margin-top: 20px;
+    width: 90%;
+    height: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-family: "poppins", sans-serif;
+    font-size: 14px;
+    border-radius: 50px 50px 0 0;
+    color: #717175;
+    letter-spacing: .4px;
+}
+
+footer > .author > p > a {
+    color: #c4c4c7;
+    text-decoration: none;
 }
 
 /* right side starts */
