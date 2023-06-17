@@ -52,12 +52,13 @@ main {
     bottom: 3%;
     width: 97%;
     height: 94%;
+    overflow: hidden;
 }
 
 /* left side sterts */
 
 .leftSide {
-    background-color: rgba(36, 36, 47, 9);
+    background-color: #23232e;
     width: 23%;
     height: inherit;
     position: fixed;
@@ -65,7 +66,7 @@ main {
 
 .leftSide > header {
     height: 40%;
-    background-color: #23232f;
+    background-color: #23232e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +134,7 @@ main {
     padding: 30px 10%;
 }
 
-ul {
+.leftSide > main > section > ul {
     list-style-type: none;
 }
 
@@ -328,20 +329,20 @@ section > .ticks {
 }
 
 section > .ticks > img {
-    width: 15px;
-    margin-bottom: 40px;
+    width: 10px;
+    margin-bottom: 42px;
 }
 
 section > .ticks > p {
-    color: #c4c4c7;
+    color: #848486;
     font-family: "poppins", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     margin-top: -22%;
-    margin-left: 15%;
+    margin-left: 8%;
 }
 
 .leftSide > footer {
-    background-color: rgba(34, 34, 45, 9);
+    background-color: #23232e;
     width: inherit;
     height: 15%;
     width: 95%;
@@ -353,10 +354,188 @@ section > .ticks > p {
     width: 25px;
     height: 25px;
     position: absolute;
-    bottom: 5%;
+    bottom: 4%;
 }
 
 
+footer > a > img[alt="phone number"] {
+    width: 18px;
+}
+
+footer > a > img[alt="github"] {
+    width: 30px;
+    height: 30px;
+}
 
 /* middle side starts */
 
+.middleSide {
+    position: fixed;
+    left: 24.5%;
+    width: 67.5%;
+    height: 94%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.middleSide::-webkit-scrollbar {
+    display: none;
+}
+
+.middleSide > header > img {
+    position: fixed;
+    width: 68%;
+    height: 60%;
+    opacity: .25;
+}
+
+.middleTalgh {
+    position: fixed;
+    top: 3%;
+    left: 24.5%;
+    width: 68%;
+    height: 94%;
+    background-image: linear-gradient(to bottom,  rgba(30, 30, 40, .4),  rgba(30, 30, 40, 1));
+}
+
+.middleSide > main {
+    position: relative;
+    top: 8%;
+    width: 90%;
+    margin: auto;
+    height: 55%;
+    background-image: url(images/mountain.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all 2s;
+}
+
+.middleSide > main > h1 {
+    font-family: "poppins", sans-serif;
+    width: 52%;
+    font-size: 38px;
+    margin: 30px 50px;
+    color: #fbfbfb;
+}
+
+.middleSide > footer {
+    position: relative;
+    top: 12%;
+    margin: auto;
+    width: 88%;
+    overflow: hidden;
+}
+
+.middleSide > footer > .educations {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer > h2 {
+    font-family: "poppins", sans-serif;
+    font-size: 19px;
+    letter-spacing: .3px;
+    color: #fbfbfb;
+}
+
+footer > h2:first-child {
+    margin-bottom: -25px;
+}
+
+.educations > section {
+    position: relative;
+    width: 32%;
+    height: 300px;
+    padding: 40px 20px;
+    border-radius: 5px;
+    margin: 10px auto;
+    background-color: #2b2b36;
+}
+
+.educations > section > h3 {
+    font-family: "poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fbfbfb;
+    margin-bottom: 20px;
+}
+
+.educations > section > p {
+    font-family: "poppins", sans-serif;
+    font-size: 13px;
+    color: #717175;
+    margin-top: 10px;
+}
+
+.educations > section > h6 {
+    font-family: "poppins", sans-serif;
+    letter-spacing: .3px;
+    font-size: 12px;
+    color: #ffc107;
+    position: absolute;
+    bottom: 20px;
+}
+
+.interests > p {
+    font-family: "poppins", sans-serif;
+    font-size: 13px;
+    letter-spacing: .3px;
+    color: #fbfbfb;
+    width: 98%;
+    background-color: #2b2b36;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 40px 20px;
+}
+
+.interests > p > span {
+    color: #717175;
+}
+
+.experience > section {
+    font-family: "poppins", sans-serif;
+    font-size: 13px;
+    letter-spacing: .3px;
+    color: #fbfbfb;
+    width: 98%;
+    border-radius: 5px;
+    background-color: #2b2b36;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.experience > section > ul {
+    padding: 40px 20px;
+}
+
+.experience > section > ul > li {
+    color: #717175;
+}
+
+.experience > section > h6 {
+    font-family: "poppins", sans-serif;
+    letter-spacing: .3px;
+    font-size: 12px;
+    color: #ffc107;
+    position: absolute;
+    bottom: 20px;
+}
+
+/* right side starts */
+
+.rightSide {
+    position: fixed;
+    left: 92%;
+    width: 6%;
+    height: 94%;
+    transition: all 2s;
+}
+
+.rightSide.show {
+    position: fixed;
+    left: 78%;
+    width: 20%;
+}
