@@ -190,7 +190,7 @@ section > .container > .progressTwo {
     align-items: center;
     width: 80px;
     height: 80px;
-    background: conic-gradient(#ffc107 3.6deg, #191923 0deg);
+    background: conic-gradient(#fed03c 3.6deg, #191923 0deg);
     border-radius: 50%;
 } 
 
@@ -271,7 +271,7 @@ div > .title {
     height: 5px;
     border-radius: 5px;
     position: absolute;
-    background-color: #ffc107;
+    background-color: #fed03c;
     transition: all 1s .5s;
 }
 
@@ -288,7 +288,7 @@ div > .title {
     height: 5px;
     border-radius: 5px;
     position: absolute;
-    background-color: #ffc107;
+    background-color: #fed03c;
     transition: all 1s .5s;
 }
 
@@ -303,7 +303,7 @@ div > .title {
     height: 5px;
     border-radius: 5px;
     position: absolute;
-    background-color: #ffc107;
+    background-color: #fed03c;
     transition: all 1s .5s;
 }
 
@@ -410,12 +410,39 @@ footer > a > img[alt="github"] {
     transition: all 2s;
 }
 
-.middleSide > main > h1 {
+.middleSide > main > .mainTexts {
+    position: absolute;
+}
+
+main > .mainTexts > h1 {
     font-family: "poppins", sans-serif;
     width: 52%;
     font-size: 38px;
-    margin: 30px 50px;
+    margin: 30px 60px;
     color: #fbfbfb;
+}
+
+main > .mainTexts > p {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    color: #c4c4c7;
+    font-family: "poppins", sans-serif;
+    font-size: 25px;
+    width: 40%;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.mainTexts > p > .type {
+    color: #fbfbfb;
+}
+
+.mainTexts p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 5px;
+    width: 2px;
 }
 
 .middleSide > footer {
@@ -472,7 +499,7 @@ footer > h2:first-child {
     font-family: "poppins", sans-serif;
     letter-spacing: .3px;
     font-size: 12px;
-    color: #ffc107;
+    color: #fed03c;
     position: absolute;
     bottom: 20px;
 }
@@ -519,7 +546,7 @@ article > p > span {
     font-family: "poppins", sans-serif;
     letter-spacing: .3px;
     font-size: 12px;
-    color: #ffc107;
+    color: #fed03c;
     position: absolute;
     bottom: 20px;
 }
@@ -577,15 +604,87 @@ footer > .author > p > a {
 /* right side starts */
 
 .rightSide {
-    position: fixed;
+    position: relative;
     left: 92%;
     width: 6%;
-    height: 94%;
-    transition: all 2s;
+    height: 100%;
+    background-color: #20202a;
+    text-align: center;
+    transition: all 1s;
+}
+
+.blank {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 1s;
+}
+
+.blank.show {
+    z-index: 1;
+    opacity: 1;
+}
+
+.rightSide > .openButton {
+    width: 100%;
+    height: 10%;
+    z-index: 1;
+    background-color: #242430;
+    font-size: 50px;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: inherit;
+    transition: all 1s;
+}
+
+.rightSide > .rightSideInfo {
+    color: #fbfbfb;
+    font-family: "poppins", sans-serif;
+    opacity: .8;
+}
+
+.rightSide.show > .rightSideInfo {
+    display: none;
 }
 
 .rightSide.show {
-    position: fixed;
+    z-index: 1;
+    position: relative;
     left: 78%;
     width: 20%;
+}
+
+.rightSide.show > .openButton {
+    position: inherit;
+    width: 50%;
+}
+
+.rightSide > ul {
+    margin-top: 30px;
+    list-style-type: none;
+}
+
+.rightSide > ul > li {
+    font-family: "poppina",sans-serif;
+    color: #848487;
+    padding-top: 35px;
+    font-size: 15px;
+    opacity: 0;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.rightSide.show > ul > li {
+    opacity: 1;
+    z-index: 1;
+}
+
+.rightSide.show > ul > li:hover {
+    color: #fed03c;
+    cursor: pointer;
 }

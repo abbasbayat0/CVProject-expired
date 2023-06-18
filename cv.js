@@ -1,4 +1,4 @@
-let magnifier = document.querySelector(".magnifier"),
+const magnifier = document.querySelector(".magnifier"),
     profileImages = document.querySelectorAll(".clickable"),
     blankArea = document.querySelector(".blankArea"),
     headImage = document.querySelector(".headImage");
@@ -28,7 +28,7 @@ profileImages.forEach(profileImage => {
 
 // progress circules
 
-let progressCirculeOne = document.querySelector(".progressOne"),
+const progressCirculeOne = document.querySelector(".progressOne"),
     progressCirculeTwo = document.querySelector(".progressTwo"),
     progressOne = document.querySelector(".pOne"),
     progressTwo = document.querySelector(".pTwo");
@@ -57,11 +57,219 @@ let firstProgress = setInterval(() => {
 
 // progress bar
 
-let main = document.querySelector(".mainInMain"),
+const main = document.querySelector(".mainInMain"),
     progressBars = document.querySelectorAll(".progressBar");
 
 main.addEventListener("scroll", e => {
     progressBars.forEach(progressBar => {
         progressBar.classList.add("show")
     })
+})
+
+// typing effect 
+
+const typedTextSpan = document.querySelector(".type"),
+      cursorSpan = document.querySelector(".cursor"),
+      textArray = ["an engineer.", "a teacher."];
+
+let textArrayIndex = 0,
+    charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 200);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+  	setTimeout(erase, 2000);
+  }
+}
+
+function erase() {
+	if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, 100);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, 200 + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, 2000 + 250);
+});
+
+// right side
+
+const openButton = document.querySelector(".openButton"),
+      rightSide = document.querySelector(".rightSide"),
+      blank = document.querySelector(".blank")
+
+openButton.addEventListener("click", e => {
+    if (rightSide.classList.contains("show")) {
+        rightSide.classList.remove("show");
+        blank.classList.remove("show")
+    }else{
+        rightSide.classList.add("show");
+        blank.classList.add("show")
+    }
+    blank.addEventListener("click", e => {
+        rightSide.classList.remove("show");
+        blank.classList.remove("show")
+    })
+})
+
+// navigation
+
+const all = document.querySelector(".allLink"),
+      ed = document.querySelector(".ed"),
+      edLink = document.querySelector(".educationsLink"),
+      int = document.querySelector(".int"),
+      intLink = document.querySelector(".interestsLink"),
+      ex = document.querySelector(".ex"),
+      exLink = document.querySelector(".experiencesLink"),
+      pu = document.querySelector(".pu"),
+      puLink = document.querySelector(".publicationsLink"),
+      pr = document.querySelector(".pr"),
+      prLink = document.querySelector(".projectsLink"),
+      or = document.querySelector(".or"),
+      orLink = document.querySelector(".organizationsLink"),
+      rightSideInfo = document.querySelector(".rightSideInfo");
+
+all.addEventListener("click", e => {
+    rightSide.classList.remove("show");
+    blank.classList.remove("show");
+    ed.style.display = null;
+    ed.previousElementSibling.style.display = null;
+    rightSideInfo.innerHTML = "<p>A</br>l</br>l</p>";
+    int.style.display = null;
+    int.previousElementSibling.style.display = null;
+    ex.style.display = null;
+    ex.previousElementSibling.style.display = null;
+    pu.style.display = null;
+    pu.previousElementSibling.style.display = null;
+    pr.style.display = null;
+    pr.previousElementSibling.style.display = null;
+    or.style.display = null;
+    or.previousElementSibling.style.display = null;
+})
+
+edLink.addEventListener("click", e => {
+    rightSide.classList.remove("show");
+    blank.classList.remove("show");
+    ed.style.display = null;
+    ed.previousElementSibling.style.display = null;
+    rightSideInfo.innerHTML = "<p>E</br>d</br>u</br>c</br>a</br>t</br>i</br>o</br>n</br>s</p>";
+    int.style.display = "none";
+    int.previousElementSibling.style.display = "none";
+    ex.style.display = "none";
+    ex.previousElementSibling.style.display = "none";
+    pu.style.display = "none";
+    pu.previousElementSibling.style.display = "none";
+    pr.style.display = "none";
+    pr.previousElementSibling.style.display = "none";
+    or.style.display = "none";
+    or.previousElementSibling.style.display = "none";
+})
+
+intLink.addEventListener("click", e => {
+    rightSide.classList.remove("show");
+    blank.classList.remove("show");
+    int.style.display = null;
+    int.previousElementSibling.style.display = null;
+    rightSideInfo.innerHTML = "<p>I</br>n</br>t</br>e</br>r</br>e</br>s</br>t</br>s</p>";
+    ed.style.display = "none";
+    ed.previousElementSibling.style.display = "none";
+    ex.style.display = "none";
+    ex.previousElementSibling.style.display = "none";
+    pu.style.display = "none";
+    pu.previousElementSibling.style.display = "none";
+    pr.style.display = "none";
+    pr.previousElementSibling.style.display = "none";
+    or.style.display = "none";
+    or.previousElementSibling.style.display = "none";
+})
+
+exLink.addEventListener("click", e => {
+    rightSide.classList.remove("show");
+    blank.classList.remove("show");
+    ex.previousElementSibling.style.marginTop = -55 + "px"
+    ex.style.display = null;
+    ex.previousElementSibling.style.display = null;
+    rightSideInfo.innerHTML = "<p>E</br>x</br>p</br>e</br>r</br>i</br>e</br>n</br>c</br>e</br>s</p>";
+    int.style.display = "none";
+    int.previousElementSibling.style.display = "none";
+    ed.style.display = "none";
+    ed.previousElementSibling.style.display = "none";
+    pu.style.display = "none";
+    pu.previousElementSibling.style.display = "none";
+    pr.style.display = "none";
+    pr.previousElementSibling.style.display = "none";
+    or.style.display = "none";
+    or.previousElementSibling.style.display = "none";
+})
+
+puLink.addEventListener("click", e => {
+    rightSide.classList.remove("show");
+    blank.classList.remove("show");
+    pu.previousElementSibling.style.marginTop = -85 + "px"
+    pu.style.display = null;
+    pu.previousElementSibling.style.display = null;
+    rightSideInfo.innerHTML = "<p>P</br>u</br>b</br>l</br>i</br>c</br>a</br>t</br>i</br>o</br>n</br>s</p>";
+    int.style.display = "none";
+    int.previousElementSibling.style.display = "none";
+    ex.style.display = "none";
+    ex.previousElementSibling.style.display = "none";
+    ed.style.display = "none";
+    ed.previousElementSibling.style.display = "none";
+    pr.style.display = "none";
+    pr.previousElementSibling.style.display = "none";
+    or.style.display = "none";
+    or.previousElementSibling.style.display = "none";
+})
+
+prLink.addEventListener("click", e => {
+    rightSide.classList.remove("show");
+    blank.classList.remove("show");
+    pr.previousElementSibling.style.marginTop = -125 + "px"
+    pr.style.display = null;
+    pr.previousElementSibling.style.display = null;
+    rightSideInfo.innerHTML = "<P>P</br>r</br>o</br>j</br>e</br>c</br>t</br>s</p>";
+    int.style.display = "none";
+    int.previousElementSibling.style.display = "none";
+    ex.style.display = "none";
+    ex.previousElementSibling.style.display = "none";
+    pu.style.display = "none";
+    pu.previousElementSibling.style.display = "none";
+    ed.style.display = "none";
+    ed.previousElementSibling.style.display = "none";
+    or.style.display = "none";
+    or.previousElementSibling.style.display = "none";
+})
+
+orLink.addEventListener("click", e => {
+    rightSide.classList.remove("show");
+    blank.classList.remove("show");
+    or.previousElementSibling.style.marginTop = -160 + "px"
+    or.style.display = null;
+    or.previousElementSibling.style.display = null;
+    rightSideInfo.innerHTML = "<p>O</br>r</br>g</br>a</br>n</br>i</br>z</br>a</br>t</br>i</br>o</br>n</br>s</p>";
+    int.style.display = "none";
+    int.previousElementSibling.style.display = "none";
+    ex.style.display = "none";
+    ex.previousElementSibling.style.display = "none";
+    pu.style.display = "none";
+    pu.previousElementSibling.style.display = "none";
+    pr.style.display = "none";
+    pr.previousElementSibling.style.display = "none";
+    ed.style.display = "none";
+    ed.previousElementSibling.style.display = "none";
 })
