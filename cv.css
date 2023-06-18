@@ -382,6 +382,24 @@ footer > a > img[alt="github"] {
     display: none;
 }
 
+.sleep {
+    position: absolute;
+    top: 380px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 50px 0 0;
+    background-color: #1c1c27;
+    z-index: -1;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.sleep.show {
+    z-index: 1;
+    opacity: 1;
+}
+
 .middleSide > header > img {
     position: fixed;
     width: 68%;
@@ -578,29 +596,6 @@ article > p > span {
     color: #717175;
 }
 
-footer > .author {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #2c2c37;
-    margin-top: 20px;
-    width: 90%;
-    height: 20px;
-    display: flex;
-    justify-content: space-around;
-    font-family: "poppins", sans-serif;
-    font-size: 14px;
-    border-radius: 50px 50px 0 0;
-    color: #717175;
-    letter-spacing: .4px;
-}
-
-footer > .author > p > a {
-    color: #c4c4c7;
-    text-decoration: none;
-}
-
 /* right side starts */
 
 .rightSide {
@@ -687,4 +682,30 @@ footer > .author > p > a {
 .rightSide.show > ul > li:hover {
     color: #fed03c;
     cursor: pointer;
+}
+
+.rightSide > .author {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c2c37;
+    margin-top: 20px;
+    width: 100%;
+    height: 0;
+    font-family: "poppins", sans-serif;
+    font-size: 14px;
+    border-radius: 50px 50px 0 0;
+    color: #717175;
+    letter-spacing: .4px;
+    transition: all 1s 1s;
+}
+
+.rightSide.show > .author {
+    height: 60px;
+}
+
+.author > p > a {
+    color: #c4c4c7;
+    text-decoration: none;
 }
