@@ -65,7 +65,7 @@ main {
     transition: all 2s;
 }
 
-.leftSide > header {
+.leftSide header {
     height: 40%;
     background-color: #23232e;
     display: flex;
@@ -73,13 +73,13 @@ main {
     align-items: center;
 }
 
-.leftSide > header > img:first-child {
+.leftSide header img:first-child {
     margin-bottom: 100px;
     margin-top: 50px;
     width: 120px;
 }
 
-.leftSide > header > .magnifier {
+.leftSide header .magnifier {
     width: 40px;
     position: fixed;
     top: 13%;
@@ -87,12 +87,12 @@ main {
     transition: all .5s;
 }
 
-.leftSide > header > .magnifier.show {
+.leftSide header .magnifier.show {
     opacity: .8;
     cursor: pointer;
 }
 
-.leftSide > header > strong {
+.leftSide header strong {
     font-family: "Poppins",sans-serif;
     font-weight: 450;
     font-size: 15px;
@@ -103,11 +103,11 @@ main {
     cursor: default;
 }
 
-.leftSide > header > strong:hover {
+.leftSide header strong:hover {
     color: #ffc107;
 }
 
-.leftSide > header > pre {
+.leftSide header pre {
     position: absolute;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -118,7 +118,7 @@ main {
     margin-left: -85px;
 }
 
-.leftSide > main {
+.leftSide main {
     width: inherit;
     height: 40%;
     position: fixed;
@@ -127,19 +127,19 @@ main {
     overflow: scroll;
 }
 
-.leftSide > main::-webkit-scrollbar {
+.leftSide main::-webkit-scrollbar {
     display: none;
 }
 
-.leftSide > main > section {
+.leftSide main section {
     padding: 30px 10%;
 }
 
-.leftSide > main > section > ul {
+.leftSide main section ul {
     list-style-type: none;
 }
 
-li > h6 {
+li h6 {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 13px;
@@ -149,7 +149,7 @@ li > h6 {
 
 }
 
-li > span {
+li span {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 13px;
@@ -158,7 +158,7 @@ li > span {
     float: right;
 }
 
-main > section > .firstHr {
+main section .firstHr {
     margin-top: 40px;
     width: 98%;
     margin: 40px auto;
@@ -166,11 +166,11 @@ main > section > .firstHr {
     color: rgb(140, 140, 142);
 }
 
-main > .languages {
+main .languages {
     position: relative;
 }
 
-main > section > .container {
+main section .container {
     width: 90%;
     position: absolute;
     top: -80%;
@@ -179,8 +179,8 @@ main > section > .container {
     justify-content: space-around;
 }
 
-section > .container > .progressOne,
-section > .container > .progressTwo {
+section .container .progressOne,
+section .container .progressTwo {
     position: relative;
     font-family: "poppins", sans-serif;
     font-size: 15px;
@@ -195,8 +195,8 @@ section > .container > .progressTwo {
     border-radius: 50%;
 } 
 
-section > .container > .progressOne::before,
-section > .container > .progressTwo::before {
+section .container .progressOne::before,
+section .container .progressTwo::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -207,14 +207,14 @@ section > .container > .progressTwo::before {
     border-radius: 50%;
 }
 
-div > span {
+div span {
     position: relative;
     color: rgb(202, 202, 206);
     font-weight: 500;
     letter-spacing: .3px;
 }
 
-div > .title {
+div .title {
     color: white;
     position: absolute;
     top: 110%;
@@ -241,21 +241,21 @@ div > .title {
     margin-top: 20px;
 }
 
-.abilities > .title {
+.abilities .title {
     position: absolute;
     left: 12%;
     color: #c4c4c7;
     margin-top: -25px;
 }
 
-.abilities > .percent {
+.abilities .percent {
     position: absolute;
     right: 12%;
     color: #848487;
     margin-top: -25px;
 }
 
-.abilities > .progressBar {
+.abilities .progressBar {
     width: 94%;
     height: 5px;
     background-color: #191923;
@@ -263,10 +263,10 @@ div > .title {
     margin: 0 auto 55px auto;
 }
 
-.abilities > .python::after,
-.abilities > .matlab::after,
-.abilities > .photoshop::after,
-.abilities > .arduino::after {
+.abilities .python::after,
+.abilities .matlab::after,
+.abilities .photoshop::after,
+.abilities .arduino::after {
     content: "";
     width: 0;
     height: 5px;
@@ -276,14 +276,14 @@ div > .title {
     transition: all 1s .5s;
 }
 
-.abilities > .python.show::after,
-.abilities > .matlab.show::after,
-.abilities > .photoshop.show::after,
-.abilities > .arduino.show::after {
+.abilities .python.show::after,
+.abilities .matlab.show::after,
+.abilities .photoshop.show::after,
+.abilities .arduino.show::after {
     width: 37%;
 }
 
-.abilities > .deep::after {
+.abilities .deep::after {
     content: "";
     width: 0;
     height: 5px;
@@ -293,12 +293,12 @@ div > .title {
     transition: all 1s .5s;
 }
 
-.abilities > .deep.show::after {
+.abilities .deep.show::after {
     width: 66.6%;
 }
 
-.abilities > .raspberry::after,
-.abilities > .siemens::after {
+.abilities .raspberry::after,
+.abilities .siemens::after {
     content: "";
     width: 0;
     height: 5px;
@@ -308,8 +308,8 @@ div > .title {
     transition: all 1s .5s;
 }
 
-.abilities > .raspberry.show::after,
-.abilities > .siemens.show::after {
+.abilities .raspberry.show::after,
+.abilities .siemens.show::after {
     width: 74%;
 }
 
@@ -323,18 +323,18 @@ div > .title {
     color: rgb(140, 140, 142);
 }
 
-section > .ticks {
+section .ticks {
     margin-top: -5%;
     position: absolute;
     left: 12%;
 }
 
-section > .ticks > img {
+section .ticks img {
     width: 10px;
     margin-bottom: 42px;
 }
 
-section > .ticks > p {
+section .ticks p {
     color: #848486;
     font-family: "poppins", sans-serif;
     font-size: 13px;
@@ -342,7 +342,7 @@ section > .ticks > p {
     margin-left: 8%;
 }
 
-.leftSide > footer {
+.leftSide footer {
     background-color: #23232e;
     width: inherit;
     height: 15%;
@@ -351,7 +351,7 @@ section > .ticks > p {
     justify-content: space-around;
 }
 
-.leftSide > footer > a > img {
+.leftSide footer a img {
     width: 25px;
     height: 25px;
     position: absolute;
@@ -359,11 +359,11 @@ section > .ticks > p {
 }
 
 
-footer > a > img[alt="phone number"] {
+footer a img[alt="phone number"] {
     width: 18px;
 }
 
-footer > a > img[alt="github"] {
+footer a img[alt="github"] {
     width: 30px;
     height: 30px;
 }
@@ -407,7 +407,7 @@ footer > a > img[alt="github"] {
     opacity: 1;
 }
 
-.middleSide > header > img {
+.middleSide header img {
     position: absolute;
     width: inherit;
     height: 60%;
@@ -421,7 +421,7 @@ footer > a > img[alt="github"] {
     background-image: linear-gradient(to bottom,  rgba(30, 30, 40, .4),  rgba(30, 30, 40, 1));
 }
 
-.middleSide > main {
+.middleSide main {
     position: relative;
     top: 8%;
     width: 90%;
@@ -433,11 +433,11 @@ footer > a > img[alt="github"] {
     transition: all 2s;
 }
 
-.middleSide > main > .mainTexts {
+.middleSide main .mainTexts {
     position: absolute;
 }
 
-main > .mainTexts > h1 {
+main .mainTexts h1 {
     font-family: "poppins", sans-serif;
     width: 52%;
     font-size: 38px;
@@ -445,11 +445,11 @@ main > .mainTexts > h1 {
     color: #fbfbfb;
 }
 
-.mainTexts > pre {
+.mainTexts pre {
     display: none;
 }
 
-main > .mainTexts > p {
+main .mainTexts p {
     position: absolute;
     top: 120%;
     left: 0;
@@ -461,7 +461,7 @@ main > .mainTexts > p {
     margin-left: 30px;
 }
 
-.mainTexts > p > .type {
+.mainTexts p .type {
     color: #fbfbfb;
 }
 
@@ -472,7 +472,7 @@ main > .mainTexts > p {
     width: 2px;
 }
 
-.middleSide > footer {
+.middleSide footer {
     position: relative;
     top: 12%;
     margin: auto;
@@ -480,24 +480,24 @@ main > .mainTexts > p {
     overflow: hidden;
 }
 
-.middleSide > footer > .educations {
+.middleSide footer .educations {
     padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
 }
 
-footer > h2 {
+footer h2 {
     font-family: "poppins", sans-serif;
     font-size: 19px;
     letter-spacing: .3px;
     color: #fbfbfb;
 }
 
-footer > h2:first-child {
+footer h2:first-child {
     margin-bottom: -25px;
 }
 
-.educations > section {
+.educations section {
     position: relative;
     width: 32%;
     height: 300px;
@@ -507,7 +507,7 @@ footer > h2:first-child {
     background-color: #2b2b36;
 }
 
-.educations > section > h3 {
+.educations section h3 {
     font-family: "poppins", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -515,14 +515,14 @@ footer > h2:first-child {
     margin-bottom: 20px;
 }
 
-.educations > section > p {
+.educations section p {
     font-family: "poppins", sans-serif;
     font-size: 13px;
     color: #717175;
     margin-top: 10px;
 }
 
-.educations > section > h6 {
+.educations section h6 {
     font-family: "poppins", sans-serif;
     letter-spacing: .3px;
     font-size: 12px;
@@ -531,7 +531,7 @@ footer > h2:first-child {
     bottom: 20px;
 }
 
-.interests > p {
+.interests p {
     font-family: "poppins", sans-serif;
     font-size: 13px;
     letter-spacing: .3px;
@@ -543,11 +543,11 @@ footer > h2:first-child {
     padding: 40px 20px;
 }
 
-article > p > span {
+article p span {
     color: #717175;
 }
 
-.experience > section {
+.experience section {
     font-family: "poppins", sans-serif;
     font-size: 13px;
     letter-spacing: .3px;
@@ -561,15 +561,15 @@ article > p > span {
     position: relative;
 }
 
-.experience > section > ul {
+.experience section ul {
     padding: 10px 20px 20px 20px;
 }
 
-.experience > section > ul > li {
+.experience section ul li {
     color: #717175;
 }
 
-.experience > section > h6 {
+.experience section h6 {
     font-family: "poppins", sans-serif;
     letter-spacing: .3px;
     font-size: 12px;
@@ -578,15 +578,15 @@ article > p > span {
     bottom: 20px;
 }
 
-.experience > section > p > span {
+.experience section p span {
     color: #717175;
 }
 
-.experience > section > p {
+.experience section p {
     margin-bottom: 30px;
 }
 
-.publication > section {
+.publication section {
     font-family: "poppins", sans-serif;
     font-size: 13px;
     letter-spacing: .3px;
@@ -601,7 +601,7 @@ article > p > span {
 
 }
 
-.publication > section > p > span {
+.publication section p span {
     color: #717175;
 }
 
@@ -634,7 +634,7 @@ article > p > span {
     opacity: 1;
 }
 
-.rightSide > .openButton {
+.rightSide .openButton {
     width: 100%;
     height: 10%;
     background-color: #242430;
@@ -643,14 +643,14 @@ article > p > span {
     transition: all 1s;
 }
 
-.rightSide > .rightSideInfo {
+.rightSide .rightSideInfo {
     line-height: 50px;
     color: #fbfbfb;
     font-family: "poppins", sans-serif;
     opacity: .8;
 }
 
-.rightSide.show > .rightSideInfo {
+.rightSide.show .rightSideInfo {
     display: none;
 }
 
@@ -661,17 +661,17 @@ article > p > span {
     width: 20%;
 }
 
-.rightSide.show > .openButton {
+.rightSide.show .openButton {
     position: inherit;
     width: 50%;
 }
 
-.rightSide > ul {
+.rightSide ul {
     margin-top: 30px;
     list-style-type: none;
 }
 
-.rightSide > ul > li {
+.rightSide ul li {
     font-family: "poppina",sans-serif;
     color: #848487;
     padding-top: 35px;
@@ -681,17 +681,17 @@ article > p > span {
     transition: all 1s;
 }
 
-.rightSide.show > ul > li {
+.rightSide.show ul li {
     opacity: 1;
     z-index: 1;
 }
 
-.rightSide.show > ul > li:hover {
+.rightSide.show ul li:hover {
     color: #fed03c;
     cursor: pointer;
 }
 
-.rightSide > .author {
+.rightSide .author {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -708,11 +708,11 @@ article > p > span {
     transition: all 1s 1s;
 }
 
-.rightSide.show > .author {
+.rightSide.show .author {
     height: 60px;
 }
 
-.author > p > a {
+.author p a {
     color: #c4c4c7;
     text-decoration: none;
 }
@@ -727,13 +727,13 @@ article > p > span {
         right: 2%;
         width: 96%;
     }
-    .middleSide > main {
+    .middleSide main {
         background-image: url(images/mountain1.jpg);
     }
-    .middleSide > main > .mainTexts > h1 {
+    .middleSide main .mainTexts h1 {
         display: none;
     }
-    .middleSide > main > .mainTexts > pre {
+    .middleSide  main  .mainTexts  pre {
         display: block;
         content: "Pouria Maleki";
         font-family: "poppins", sans-serif;
@@ -744,7 +744,7 @@ article > p > span {
         font-size: 60px;
         color: #fbfbfb;
     }
-    .middleSide > main > .mainTexts > p {
+    .middleSide main .mainTexts p {
         display: none;
     }
     .rightSide {
