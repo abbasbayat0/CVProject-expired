@@ -157,7 +157,7 @@ all.addEventListener("click", e => {
             middleSide.scrollTo({top:0})
             ed.style.display = null;
             ed.previousElementSibling.style.display = null;
-            rightSideInfo.innerHTML = "<p>A</br>l</br>l</p>";
+            rightSideInfo.innerHTML = "<p>H</br>o</br>m</br>e</p>";
             int.style.display = null;
             int.previousElementSibling.style.display = null;
             ex.style.display = null;

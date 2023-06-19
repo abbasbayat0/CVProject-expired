@@ -62,6 +62,7 @@ main {
     width: 23%;
     height: inherit;
     position: fixed;
+    transition: all 2s;
 }
 
 .leftSide > header {
@@ -74,14 +75,14 @@ main {
 
 .leftSide > header > img:first-child {
     margin-bottom: 100px;
-    margin-top: 10px;
+    margin-top: 50px;
     width: 120px;
 }
 
 .leftSide > header > .magnifier {
     width: 40px;
     position: fixed;
-    top: 12%;
+    top: 13%;
     opacity: 0;
     transition: all .5s;
 }
@@ -95,8 +96,8 @@ main {
     font-family: "Poppins",sans-serif;
     font-weight: 450;
     font-size: 15px;
-    position: fixed;
-    margin-top: 80px;
+    position: absolute;
+    margin-top: 110px;
     color: white;
     transition: all .5s;
     cursor: default;
@@ -107,13 +108,13 @@ main {
 }
 
 .leftSide > header > pre {
-    position: fixed;
+    position: absolute;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 13px;
     letter-spacing: .2px;
     color: rgb(140, 140, 142);
-    margin-top: 200px;
+    margin-top: 220px;
     margin-left: -85px;
 }
 
@@ -367,6 +368,12 @@ footer > a > img[alt="github"] {
     height: 30px;
 }
 
+.openSide {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
 /* middle side starts */
 
 .middleSide {
@@ -401,17 +408,15 @@ footer > a > img[alt="github"] {
 }
 
 .middleSide > header > img {
-    position: fixed;
-    width: 68%;
+    position: absolute;
+    width: inherit;
     height: 60%;
     opacity: .25;
 }
 
-.middleTalgh {
-    position: fixed;
-    top: 3%;
-    left: 24.5%;
-    width: 68%;
+.middleShadow {
+    position: absolute;
+    width: inherit;
     height: 94%;
     background-image: linear-gradient(to bottom,  rgba(30, 30, 40, .4),  rgba(30, 30, 40, 1));
 }
@@ -438,6 +443,10 @@ main > .mainTexts > h1 {
     font-size: 38px;
     margin: 30px 60px;
     color: #fbfbfb;
+}
+
+.mainTexts > pre {
+    display: none;
 }
 
 main > .mainTexts > p {
@@ -628,16 +637,14 @@ article > p > span {
 .rightSide > .openButton {
     width: 100%;
     height: 10%;
-    z-index: 1;
     background-color: #242430;
-    font-size: 50px;
-    font-weight: 900;
     cursor: pointer;
     z-index: inherit;
     transition: all 1s;
 }
 
 .rightSide > .rightSideInfo {
+    line-height: 50px;
     color: #fbfbfb;
     font-family: "poppins", sans-serif;
     opacity: .8;
@@ -708,4 +715,39 @@ article > p > span {
 .author > p > a {
     color: #c4c4c7;
     text-decoration: none;
+}
+
+@media screen and (max-width: 950px) {
+    .leftSide {
+        display: none;
+    }
+    .middleSide {
+        position: fixed;
+        left: 2%;
+        right: 2%;
+        width: 96%;
+    }
+    .middleSide > main {
+        background-image: url(images/mountain1.jpg);
+    }
+    .middleSide > main > .mainTexts > h1 {
+        display: none;
+    }
+    .middleSide > main > .mainTexts > pre {
+        display: block;
+        content: "Pouria Maleki";
+        font-family: "poppins", sans-serif;
+        text-align: center;
+        width: 86.5vw;
+        margin-top: 150px;
+        justify-content: center;
+        font-size: 60px;
+        color: #fbfbfb;
+    }
+    .middleSide > main > .mainTexts > p {
+        display: none;
+    }
+    .rightSide {
+        display: none;
+    }
 }
