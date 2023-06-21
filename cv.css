@@ -605,6 +605,65 @@ article p span {
     color: #717175;
 }
 
+.mailToMe {
+    position: relative;
+    left: 0;
+    width: 98%;
+    margin: 10px auto;
+    border-radius: 5px;
+    background-color: #2b2b36;
+    padding: 40px 50px;
+}
+
+label i {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px 0 0 5px;
+    background-color: #20202a;
+}
+
+label .fa-user,
+label .fa-at {
+    text-align: center;
+    color: #848486;
+    font-size: 50px;
+    line-height: 60px;
+}
+
+label .fa-envelope-o {
+    text-align: center;
+    color: #848486;
+    font-size: 45px;
+    line-height: 60px;
+}
+
+form label input {
+    position: absolute;
+    width: 80%;
+    height: 16.2%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    color: #fbfbfb;
+    background-color: #20202a;
+}
+
+form button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    width: 30%;
+    height: 12%;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #fed03c;
+    background-color: #20202a;
+}
+
 /* right side starts */
 
 .rightSide {
