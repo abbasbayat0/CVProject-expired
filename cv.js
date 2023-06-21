@@ -178,6 +178,9 @@ all.addEventListener("click", e => {
             or.style.display = null;
             or.previousElementSibling.style.marginTop = null;
             or.previousElementSibling.style.display = null;
+            mailToMe.style.display = null;
+            mailToMe.previousElementSibling.style.marginTop = null;
+            mailToMe.previousElementSibling.style.display = null;
         }, 1000)
         setTimeout(() => {
             sleep.classList.remove("show");

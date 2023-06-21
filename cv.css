@@ -648,7 +648,7 @@ article p span {
     opacity: 1;
 }
 
-.rightSide .openButton {
+.rightSide header .openButton {
     width: 100%;
     height: 10%;
     background-color: #242430;
@@ -657,13 +657,18 @@ article p span {
     transition: all 1s;
 }
 
-.rightSide .rightSideInfo {
+.rightSide.show header .openButton {
+    position: inherit;
+    width: 50%;
+}
+
+.rightSide header .rightSideInfo {
     line-height: 40px;
     color: #fbfbfb;
     opacity: .8;
 }
 
-.rightSide.show .rightSideInfo {
+.rightSide.show header .rightSideInfo {
     display: none;
 }
 
@@ -674,35 +679,31 @@ article p span {
     width: 20%;
 }
 
-.rightSide.show .openButton {
-    position: inherit;
-    width: 50%;
+.rightSide main {
+    position: absolute;
+    top: 14%;
 }
 
-.rightSide ul {
-    margin-top: -10%;
-}
-
-.rightSide ul li {
+.rightSide main ul li {
     color: #848487;
-    padding-top: 35px;
+    padding-top: 30px;
     font-size: 15px;
     opacity: 0;
     z-index: -1;
     transition: all 1s;
 }
 
-.rightSide.show ul li {
+.rightSide.show main ul li {
     opacity: 1;
     z-index: 1;
 }
 
-.rightSide.show ul li:hover {
+.rightSide.show main ul li:hover {
     color: #fed03c;
     cursor: pointer;
 }
 
-.rightSide .author {
+.rightSide footer .author {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -716,7 +717,7 @@ article p span {
     transition: all 1s 1s;
 }
 
-.rightSide.show .author {
+.rightSide.show footer .author {
     height: 65px;
 }
 
