@@ -152,8 +152,6 @@ const all = document.querySelector(".allLink"),
       middleSide = document.querySelector(".middleSide"),
       sleep = document.querySelector(".sleep");
 
-let num = 0;
-
 all.addEventListener("click", e => {
     if(!sleep.classList.contains("show")){
         sleep.classList.add("show");
