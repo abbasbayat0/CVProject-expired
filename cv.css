@@ -602,19 +602,21 @@ article p span {
 }
 
 .mailToMe a button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 5px;
     font-size: 15px;
     border: none;
     outline: none;
     background-color: #191923;
     color: #ffc107;
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: 40%;
     transition: all .5s;
 }
 
 .mailToMe a button:hover {
-    transform: translateY(-5px);
     background-color: #ffc107;
     color: #191923;
     font-size: 17px;
