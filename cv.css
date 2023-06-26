@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@keyframes cursor {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
+}
 
 * {
     padding: 0;
@@ -37,9 +44,11 @@ body {
 
 .headImage {
     position: fixed;
-    top: 8%;
+    top: 2%;
     left: 50%;
     transform: translateX(-50%);
+    height: 95%;
+    max-width: 90%;
     z-index: 0;
     opacity: 0;
     transition: all 1s;
@@ -403,15 +412,17 @@ footer a img[alt="github"] {
 .middleSide header img {
     position: absolute;
     width: inherit;
-    height: 60%;
-    opacity: .25;
+    width: 100%;
+    height: 80%;
+    opacity: .8;
 }
 
 .middleShadow {
     position: absolute;
-    width: inherit;
-    height: 94%;
-    background-image: linear-gradient(to bottom,  rgba(30, 30, 40, .4),  rgba(30, 30, 40, 1));
+    top: 0;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to bottom,  rgba(30, 30, 40, .6),  rgb(25, 25, 35));
 }
 
 .middleSide main {
@@ -420,7 +431,7 @@ footer a img[alt="github"] {
     width: 90%;
     margin: auto;
     height: 55%;
-    background-image: url(images/mountain.jpg);
+    background-image: url(images/11.jpg);
     background-size: cover;
     background-position: center;
     transition: all 2s;
@@ -431,10 +442,11 @@ footer a img[alt="github"] {
 }
 
 main .mainTexts h1 {
-    width: 52%;
+    width: 60%;
     font-size: 38px;
     margin: 30px 60px;
     color: #fbfbfb;
+    text-shadow: 0 0 10px black;
 }
 
 .mainTexts pre {
@@ -443,17 +455,19 @@ main .mainTexts h1 {
 
 main .mainTexts p {
     position: absolute;
-    top: 120%;
-    left: 0;
-    color: #c4c4c7;
+    top: 105%;
+    left: -5%;
+    color: #fed03c;
     font-size: 25px;
-    width: 40%;
+    width: 50%;
     text-align: center;
+    text-shadow: 0 0 5px black;
     margin-left: 30px;
 }
 
 .mainTexts p .type {
     color: #fbfbfb;
+    text-shadow: 0 0 10px black;
 }
 
 .mainTexts p span.cursor {
@@ -461,6 +475,11 @@ main .mainTexts p {
     background-color: #ccc;
     margin-left: 5px;
     width: 2px;
+    animation: cursor 1s infinite;
+}
+
+.mainTexts p span.cursor.typing {
+    animation: none;
 }
 
 .middleSide footer {
@@ -742,6 +761,9 @@ article p span {
     .middleSide main {
         background-image: url(images/mountain1.jpg);
     }
+    .middleShadow {
+        background-image: linear-gradient(to bottom,  rgba(30, 30, 40, .2),  rgb(25, 25, 35));
+    }
     .middleSide main .mainTexts h1 {
         display: none;
     }
@@ -750,7 +772,7 @@ article p span {
         content: "Pouria Maleki";
         text-align: center;
         width: 86.5vw;
-        margin-top: 150px;
+        margin-top: 80px;
         justify-content: center;
         font-size: 60px;
         color: #fbfbfb;

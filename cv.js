@@ -70,7 +70,7 @@ main.addEventListener("scroll", e => {
 
 const typedTextSpan = document.querySelector(".type"),
       cursorSpan = document.querySelector(".cursor"),
-      textArray = ["an engineer.", "a teacher."];
+      textArray = ["an AI researcher.", "an electronics teacher.", "an electrical engineer."];
 
 let textArrayIndex = 0,
     charIndex = 0;
@@ -155,9 +155,9 @@ const all = document.querySelector(".allLink"),
 all.addEventListener("click", e => {
     if(!sleep.classList.contains("show")){
         sleep.classList.add("show");
+        rightSide.classList.remove("show");
+        blank.classList.remove("show");
         setTimeout(() => {
-            rightSide.classList.remove("show");
-            blank.classList.remove("show");
             middleSide.scrollTo({top:0})
             ed.style.display = null;
             ed.previousElementSibling.style.display = null;
@@ -189,9 +189,9 @@ all.addEventListener("click", e => {
 edLink.addEventListener("click", e => {
     if(!sleep.classList.contains("show")){
         sleep.classList.add("show");
+        rightSide.classList.remove("show");
+        blank.classList.remove("show");
         setTimeout(() => {
-            rightSide.classList.remove("show");
-            blank.classList.remove("show");
             ed.style.display = null;
             ed.previousElementSibling.style.display = null;
             mailToMe.style.display = "none";
@@ -218,9 +218,10 @@ edLink.addEventListener("click", e => {
 intLink.addEventListener("click", e => {
     if(!sleep.classList.contains("show")){
         sleep.classList.add("show");
+        rightSide.classList.remove("show");
+        blank.classList.remove("show");
         setTimeout(() => {
-            rightSide.classList.remove("show");
-            blank.classList.remove("show");
+            int.previousElementSibling.style.marginTop = -30 + "px";
             int.style.display = null;
             int.previousElementSibling.style.display = null;
             mailToMe.style.display = "none";
@@ -247,9 +248,9 @@ intLink.addEventListener("click", e => {
 exLink.addEventListener("click", e => {
     if(!sleep.classList.contains("show")){
         sleep.classList.add("show");
+        rightSide.classList.remove("show");
+        blank.classList.remove("show");
         setTimeout(() => {
-            rightSide.classList.remove("show");
-            blank.classList.remove("show");
             ex.previousElementSibling.style.marginTop = -80 + "px";
             ex.style.display = null;
             ex.previousElementSibling.style.display = null;
@@ -277,10 +278,10 @@ exLink.addEventListener("click", e => {
 puLink.addEventListener("click", e => {
     if(!sleep.classList.contains("show")){
         sleep.classList.add("show");
+        rightSide.classList.remove("show");
+        blank.classList.remove("show");
         setTimeout(() => {
-            rightSide.classList.remove("show");
-            blank.classList.remove("show");
-            pu.previousElementSibling.style.marginTop = -120 + "px";
+            pu.previousElementSibling.style.marginTop = -140 + "px";
             pu.style.display = null;
             pu.previousElementSibling.style.display = null;
             mailToMe.style.display = "none";
@@ -306,10 +307,10 @@ puLink.addEventListener("click", e => {
 prLink.addEventListener("click", e => {
     if(!sleep.classList.contains("show")){
         sleep.classList.add("show");
+        rightSide.classList.remove("show");
+        blank.classList.remove("show");
         setTimeout(() => {
-            rightSide.classList.remove("show");
-            blank.classList.remove("show");
-            pr.previousElementSibling.style.marginTop = -160 + "px";
+            pr.previousElementSibling.style.marginTop = -180 + "px";
             pr.style.display = null;
             pr.previousElementSibling.style.display = null;
             mailToMe.style.display = "none";
@@ -336,11 +337,11 @@ prLink.addEventListener("click", e => {
 orLink.addEventListener("click", e => {
     if(!sleep.classList.contains("show")){
         sleep.classList.add("show");
+        rightSide.classList.remove("show");
+        blank.classList.remove("show");
         setTimeout(() => {
             middleSide.scrollTo({top:380});
-            rightSide.classList.remove("show");
-            blank.classList.remove("show");
-            or.previousElementSibling.style.marginTop = -200 + "px";
+            or.previousElementSibling.style.marginTop = -220 + "px";
             or.style.display = null;
             or.previousElementSibling.style.display = null;
             mailToMe.style.display = "none";
@@ -366,10 +367,10 @@ orLink.addEventListener("click", e => {
 mailToMeLink.addEventListener("click", e => {
     if(!sleep.classList.contains("show")){
         sleep.classList.add("show");
+        rightSide.classList.remove("show");
+        blank.classList.remove("show");
         setTimeout(() => {
             middleSide.scrollTo({top:380});
-            rightSide.classList.remove("show");
-            blank.classList.remove("show");
             mailToMe.previousElementSibling.style.marginTop = -290 + "px";
             mailToMe.style.display = null;
             mailToMe.previousElementSibling.style.display = null;
