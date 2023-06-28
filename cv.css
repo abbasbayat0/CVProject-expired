@@ -108,7 +108,7 @@ main {
 }
 
 .leftSide header strong {
-    font-weight: 450;
+    font-weight: 500;
     font-size: 15px;
     position: absolute;
     margin-top: 110px;
@@ -152,7 +152,7 @@ ul {
     list-style-type: none;
 }
 
-li h6 {
+li p {
     font-weight: 500;
     font-size: 13px;
     color: white;
@@ -346,7 +346,6 @@ section .ticks p {
 
 .leftSide footer {
     background-color: #23232e;
-    width: inherit;
     height: 15%;
     width: 95%;
     display: flex;
@@ -442,20 +441,20 @@ footer a img[alt="github"] {
 }
 
 main .mainTexts h1 {
-    width: 60%;
+    width: 55%;
     font-size: 38px;
     margin: 30px 60px;
     color: #fbfbfb;
     text-shadow: 0 0 10px black;
 }
 
-.mainTexts pre {
+.mainTexts strong {
     display: none;
 }
 
 main .mainTexts p {
     position: absolute;
-    top: 105%;
+    top: 100%;
     left: -5%;
     color: #fed03c;
     font-size: 25px;
@@ -470,7 +469,7 @@ main .mainTexts p {
     text-shadow: 0 0 10px black;
 }
 
-.mainTexts p span.cursor {
+.mainTexts p .cursor {
     display: inline-block;
     background-color: #ccc;
     margin-left: 5px;
@@ -478,7 +477,7 @@ main .mainTexts p {
     animation: cursor 1s infinite;
 }
 
-.mainTexts p span.cursor.typing {
+.mainTexts p .typing {
     animation: none;
 }
 
@@ -507,7 +506,7 @@ footer h2:first-child {
 
 .educations section {
     position: relative;
-    width: 32%;
+    width: 48%;
     height: auto;
     padding: 40px 20px;
     border-radius: 5px;
@@ -528,7 +527,7 @@ footer h2:first-child {
     margin-top: 10px;
 }
 
-.educations section h6 {
+.when {
     font-size: 12px;
     color: #fed03c;
     position: absolute;
@@ -553,7 +552,6 @@ article p span {
     font-size: 13px;
     color: #fbfbfb;
     width: 98%;
-    border-radius: 5px;
     background-color: #2b2b36;
     margin: 10px auto;
     border-radius: 5px;
@@ -569,13 +567,6 @@ article p span {
     color: #717175;
 }
 
-.experience section h6 {
-    font-size: 12px;
-    color: #fed03c;
-    position: absolute;
-    bottom: 20px;
-}
-
 .experience section p span {
     color: #717175;
 }
@@ -588,7 +579,6 @@ article p span {
     font-size: 13px;
     color: #fbfbfb;
     width: 98%;
-    border-radius: 5px;
     background-color: #2b2b36;
     margin: 10px auto;
     border-radius: 5px;
@@ -630,7 +620,7 @@ article p span {
     outline: none;
     background-color: #191923;
     color: #ffc107;
-    width: 40%;
+    width: 80%;
     height: 40%;
     transition: all .5s;
 }
@@ -767,13 +757,14 @@ article p span {
     .middleSide main .mainTexts h1 {
         display: none;
     }
-    .middleSide  main  .mainTexts  pre {
+    .middleSide main .mainTexts {
+        width: 100%;
+    }
+    .mainTexts strong {
         display: block;
-        content: "Pouria Maleki";
+        width: 95%;
         text-align: center;
-        width: 86.5vw;
-        margin-top: 80px;
-        justify-content: center;
+        margin-top: 8%;
         font-size: 60px;
         color: #fbfbfb;
     }
@@ -782,9 +773,6 @@ article p span {
     }
     .educations section p {
         margin-bottom: 30px;
-    }
-    .educations section h6 {
-        bottom: 2px;
     }
     .rightSide {
         display: none;
