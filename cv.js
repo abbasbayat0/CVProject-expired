@@ -29,9 +29,9 @@ profileImages.forEach(profileImage => {
 // progress circules
 
 const progressCirculeOne = document.querySelector(".progressOne"),
-    progressCirculeTwo = document.querySelector(".progressTwo"),
-    progressOne = document.querySelector(".pOne"),
-    progressTwo = document.querySelector(".pTwo");
+      progressCirculeTwo = document.querySelector(".progressTwo"),
+      progressOne = document.querySelector(".pOne"),
+      progressTwo = document.querySelector(".pTwo");
 
 let startValueTwo = 0,
     endValueTwo = 90;
@@ -58,7 +58,7 @@ let firstProgress = setInterval(() => {
 // progress bar
 
 const main = document.querySelector(".mainInMain"),
-    progressBars = document.querySelectorAll(".progressBar");
+      progressBars = document.querySelectorAll(".progressBar");
 
 main.addEventListener("scroll", e => {
     progressBars.forEach(progressBar => {
@@ -391,5 +391,24 @@ mailToMeLink.addEventListener("click", e => {
         setTimeout(() => {
             sleep.classList.remove("show");
         }, 1100);
+    }
+})
+
+const showBio = document.querySelector(".biography"),
+      leftSide = document.querySelector(".leftSide"),
+      mobileShadow = document.querySelector(".mobileShadow"),
+      biography = document.querySelector(".biography");
+showBio.addEventListener("click", e => {
+    if(!showBio.classList.contains("show")) {
+        showBio.classList.add("show");
+        leftSide.classList.add("show")
+        mobileShadow.classList.add("show");
+        main.scrollTo({top:1})
+        biography.textContent = "Hide Biography";
+    }else{
+        showBio.classList.remove("show");
+        leftSide.classList.remove("show");
+        mobileShadow.classList.remove("show");
+        biography.textContent = "Show Biography";
     }
 })

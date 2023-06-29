@@ -6,6 +6,11 @@
     99% { background-color: transparent; }
     100%  { background-color: #ccc; }
 }
+@keyframes fever {
+    0% {text-shadow: 0 0 1px black;}
+    50% {text-shadow: 0 0 20px white;}
+    100% {text-shadow: 0 0 1px black;}
+}
 
 * {
     padding: 0;
@@ -26,11 +31,11 @@ body {
 
 /* better focus on pic */
 .blankArea {
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     z-index: 0;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.6);
@@ -44,11 +49,11 @@ body {
 
 .headImage {
     position: fixed;
-    top: 2%;
-    left: 50%;
+    inset-block-start: 2%;
+    inset-inline-start: 50%;
     transform: translateX(-50%);
-    height: 95%;
-    max-width: 90%;
+    block-size: 95%;
+    max-inline-size: 90%;
     z-index: 0;
     opacity: 0;
     transition: all 1s;
@@ -62,10 +67,10 @@ body {
 /* it is the left side content */
 main {
     position: fixed;
-    top: 3%;
-    bottom: 3%;
-    width: 97%;
-    height: 94%;
+    inset-block-start: 3%;
+    inset-block-end: 3%;
+    inline-size: 97%;
+    block-size: 94%;
     overflow: hidden;
 }
 
@@ -73,15 +78,15 @@ main {
 
 .leftSide {
     background-color: #23232e;
-    width: 23%;
-    height: inherit;
+    inline-size: 23%;
+    block-size: inherit;
     position: fixed;
     z-index: 2;
     transition: all 2s;
 }
 
 .leftSide header {
-    height: 40%;
+    block-size: 40%;
     background-color: #23232e;
     display: flex;
     justify-content: center;
@@ -89,15 +94,15 @@ main {
 }
 
 .leftSide header img:first-child {
-    margin-bottom: 100px;
-    margin-top: 50px;
-    width: 120px;
+    margin-block-end: 100px;
+    margin-block-start: 50px;
+    inline-size: 120px;
 }
 
 .leftSide header .magnifier {
-    width: 40px;
+    inline-size: 40px;
     position: fixed;
-    top: 13%;
+    inset-block-start: 13%;
     opacity: 0;
     transition: all .5s;
 }
@@ -111,7 +116,7 @@ main {
     font-weight: 500;
     font-size: 15px;
     position: absolute;
-    margin-top: 110px;
+    margin-block-start: 110px;
     color: white;
     transition: all .5s;
     cursor: default;
@@ -127,15 +132,15 @@ main {
     font-weight: 500;
     font-size: 13px;
     color: rgb(140, 140, 142);
-    margin-top: 220px;
-    margin-left: -85px;
+    margin-block-start: 220px;
+    margin-inline-start: -85px;
 }
 
 .leftSide main {
-    width: inherit;
-    height: 40%;
+    inline-size: inherit;
+    block-size: 40%;
     position: fixed;
-    top: 45%;
+    inset-block-start: 45%;
     background-color: #20202a;
     overflow: scroll;
 }
@@ -168,8 +173,8 @@ li span {
 }
 
 main section .firstHr {
-    margin-top: 40px;
-    width: 98%;
+    margin-block-start: 40px;
+    inline-size: 98%;
     margin: 40px auto;
     opacity: .3;
     color: rgb(140, 140, 142);
@@ -180,10 +185,10 @@ main .languages {
 }
 
 main section .container {
-    width: 90%;
+    inline-size: 90%;
     position: absolute;
-    top: -80%;
-    left: 5%;
+    inset-block-start: -80%;
+    inset-inline-start: 5%;
     display: flex;
     justify-content: space-around;
 }
@@ -196,8 +201,8 @@ section .container .progressTwo {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    inline-size: 80px;
+    block-size: 80px;
     background: conic-gradient(#fed03c 3.6deg, #191923 0deg);
     border-radius: 50%;
 } 
@@ -206,10 +211,10 @@ section .container .progressOne::before,
 section .container .progressTwo::before {
     content: "";
     position: absolute;
-    left: 50%;
+    inset-inline-start: 50%;
     transform: translateX(-50%);
-    width: 70px;
-    height: 70px;
+    inline-size: 70px;
+    block-size: 70px;
     background-color: #20202a;
     border-radius: 50%;
 }
@@ -224,16 +229,16 @@ div span {
 div .title {
     color: white;
     position: absolute;
-    top: 110%;
+    inset-block-start: 110%;
     font-size: 13px;
 }
 
 .secondHr {
     position: absolute;
-    left: 50%;
+    inset-inline-start: 50%;
     transform: translateX(-50%);
-    margin-top: 40px;
-    width: 80%;
+    margin-block-start: 40px;
+    inline-size: 80%;
     opacity: .3;
     color: rgb(140, 140, 142);
 }
@@ -241,26 +246,26 @@ div .title {
 .abilities {
     font-size: 13px;
     font-weight: 400;
-    margin-top: 20px;
+    margin-block-start: 20px;
 }
 
 .abilities .title {
     position: absolute;
-    left: 12%;
+    inset-inline-start: 12%;
     color: #c4c4c7;
-    margin-top: -25px;
+    margin-block-start: -25px;
 }
 
 .abilities .percent {
     position: absolute;
-    right: 12%;
+    inset-inline-end: 12%;
     color: #848487;
-    margin-top: -25px;
+    margin-block-start: -25px;
 }
 
 .abilities .progressBar {
-    width: 94%;
-    height: 5px;
+    inline-size: 94%;
+    block-size: 5px;
     background-color: #191923;
     border-radius: 5px;
     margin: 0 auto 55px auto;
@@ -271,8 +276,8 @@ div .title {
 .abilities .photoshop::after,
 .abilities .arduino::after {
     content: "";
-    width: 0;
-    height: 5px;
+    inline-size: 0;
+    block-size: 5px;
     border-radius: 5px;
     position: absolute;
     background-color: #fed03c;
@@ -283,13 +288,13 @@ div .title {
 .abilities .matlab.show::after,
 .abilities .photoshop.show::after,
 .abilities .arduino.show::after {
-    width: 37%;
+    inline-size: 37%;
 }
 
 .abilities .deep::after {
     content: "";
-    width: 0;
-    height: 5px;
+    inline-size: 0;
+    block-size: 5px;
     border-radius: 5px;
     position: absolute;
     background-color: #fed03c;
@@ -297,14 +302,14 @@ div .title {
 }
 
 .abilities .deep.show::after {
-    width: 66.6%;
+    inline-size: 66.6%;
 }
 
 .abilities .raspberry::after,
 .abilities .siemens::after {
     content: "";
-    width: 0;
-    height: 5px;
+    inline-size: 0;
+    block-size: 5px;
     border-radius: 5px;
     position: absolute;
     background-color: #fed03c;
@@ -313,65 +318,65 @@ div .title {
 
 .abilities .raspberry.show::after,
 .abilities .siemens.show::after {
-    width: 74%;
+    inline-size: 74%;
 }
 
 .thirdHr {  
     position: absolute;
-    left: 50%;
+    inset-inline-start: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    margin-top: -10px;
+    inline-size: 80%;
+    margin-block-start: -10px;
     opacity: .3;
     color: rgb(140, 140, 142);
 }
 
 section .ticks {
-    margin-top: -5%;
+    margin-block-start: -5%;
     position: absolute;
-    left: 12%;
+    inset-inline-start: 12%;
 }
 
 section .ticks img {
-    width: 10px;
-    margin-bottom: 42px;
+    inline-size: 10px;
+    margin-block-end: 42px;
 }
 
 section .ticks p {
     color: #848486;
     font-size: 13px;
-    margin-top: -22%;
-    margin-left: 8%;
+    margin-block-start: -22%;
+    margin-inline-start: 8%;
 }
 
 .leftSide footer {
     background-color: #23232e;
-    height: 15%;
-    width: 95%;
+    block-size: 15%;
+    inline-size: 95%;
     display: flex;
     justify-content: space-around;
 }
 
 .leftSide footer a img {
-    width: 25px;
-    height: 25px;
+    inline-size: 25px;
+    block-size: 25px;
     position: absolute;
-    bottom: 4%;
+    inset-block-end: 4%;
 }
 
 
 footer a img[alt="phone number"] {
-    width: 18px;
+    inline-size: 18px;
 }
 
 footer a img[alt="github"] {
-    width: 30px;
-    height: 30px;
+    inline-size: 30px;
+    block-size: 30px;
 }
 
 .openSide {
-    width: 0;
-    height: 0;
+    inline-size: 0;
+    block-size: 0;
     opacity: 0;
 }
 
@@ -379,9 +384,9 @@ footer a img[alt="github"] {
 
 .middleSide {
     position: fixed;
-    left: 24.5%;
-    width: 67.5%;
-    height: 94%;
+    inset-inline-start: 24.5%;
+    inline-size: 67.5%;
+    block-size: 94%;
     overflow: scroll;
     scroll-behavior: smooth;
 }
@@ -392,10 +397,10 @@ footer a img[alt="github"] {
 
 .sleep {
     position: absolute;
-    top: 380px;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset-block-start: 380px;
+    inset-inline-start: 0;
+    inline-size: 100%;
+    block-size: 100%;
     border-radius: 50px 50px 0 0;
     background-color: #1c1c27;
     z-index: -1;
@@ -410,26 +415,26 @@ footer a img[alt="github"] {
 
 .middleSide header img {
     position: absolute;
-    width: inherit;
-    width: 100%;
-    height: 80%;
+    inline-size: inherit;
+    inline-size: 100%;
+    block-size: 80%;
     opacity: .8;
 }
 
 .middleShadow {
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 80%;
+    inset-block-start: 0;
+    inline-size: 100%;
+    block-size: 80%;
     background-image: linear-gradient(to bottom,  rgba(30, 30, 40, .6),  rgb(25, 25, 35));
 }
 
 .middleSide main {
     position: relative;
-    top: 8%;
-    width: 90%;
+    inset-block-start: 8%;
+    inline-size: 90%;
     margin: auto;
-    height: 55%;
+    block-size: 55%;
     background-image: url(images/11.png);
     background-size: cover;
     background-position: center;
@@ -441,7 +446,7 @@ footer a img[alt="github"] {
 }
 
 main .mainTexts h1 {
-    width: 55%;
+    inline-size: 55%;
     font-size: 38px;
     margin: 30px 60px;
     color: #fbfbfb;
@@ -452,16 +457,20 @@ main .mainTexts h1 {
     display: none;
 }
 
+.biography {
+    display: none;
+}
+
 main .mainTexts p {
     position: absolute;
-    top: 100%;
-    left: -5%;
+    inset-block-start: 100%;
+    inset-inline-start: -5%;
     color: #fed03c;
     font-size: 25px;
-    width: 50%;
+    inline-size: 50%;
     text-align: center;
     text-shadow: 0 0 5px black;
-    margin-left: 30px;
+    margin-inline-start: 30px;
 }
 
 .mainTexts p .type {
@@ -472,8 +481,8 @@ main .mainTexts p {
 .mainTexts p .cursor {
     display: inline-block;
     background-color: #ccc;
-    margin-left: 5px;
-    width: 2px;
+    margin-inline-start: 5px;
+    inline-size: 2px;
     animation: cursor 1s infinite;
 }
 
@@ -483,9 +492,9 @@ main .mainTexts p {
 
 .middleSide footer {
     position: relative;
-    top: 12%;
+    inset-block-start: 12%;
     margin: auto;
-    width: 88%;
+    inline-size: 88%;
     overflow: hidden;
 }
 
@@ -501,13 +510,13 @@ footer h2 {
 }
 
 footer h2:first-child {
-    margin-bottom: -25px;
+    margin-block-end: -25px;
 }
 
 .educations section {
     position: relative;
-    width: 48%;
-    height: auto;
+    inline-size: 48%;
+    block-size: auto;
     padding: 40px 20px;
     border-radius: 5px;
     margin: 10px auto;
@@ -518,26 +527,26 @@ footer h2:first-child {
     font-size: 14px;
     font-weight: 400;
     color: #fbfbfb;
-    margin-bottom: 20px;
+    margin-block-end: 20px;
 }
 
 .educations section p {
     font-size: 13px;
     color: #717175;
-    margin-top: 10px;
+    margin-block-start: 10px;
 }
 
 .when {
     font-size: 12px;
     color: #fed03c;
     position: absolute;
-    bottom: 15px;
+    inset-block-end: 15px;
 }
 
 .interests p {
     font-size: 13px;
     color: #fbfbfb;
-    width: 98%;
+    inline-size: 98%;
     background-color: #2b2b36;
     margin: 10px auto;
     border-radius: 5px;
@@ -551,7 +560,7 @@ article p span {
 .experience section {
     font-size: 13px;
     color: #fbfbfb;
-    width: 98%;
+    inline-size: 98%;
     background-color: #2b2b36;
     margin: 10px auto;
     border-radius: 5px;
@@ -572,13 +581,13 @@ article p span {
 }
 
 .experience section p {
-    margin-bottom: 30px;
+    margin-block-end: 30px;
 }
 
 .publication section {
     font-size: 13px;
     color: #fbfbfb;
-    width: 98%;
+    inline-size: 98%;
     background-color: #2b2b36;
     margin: 10px auto;
     border-radius: 5px;
@@ -593,11 +602,11 @@ article p span {
 
 .mailToMe {
     position: relative;
-    left: 0;
+    inset-inline-start: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 98%;
+    inline-size: 98%;
     margin: 10px auto;
     border-radius: 5px;
     background-color: #2b2b36;
@@ -605,14 +614,14 @@ article p span {
 }
 
 .mailToMe a {
-    width: 200px;
-    height: 50px;
+    inline-size: 200px;
+    block-size: 50px;
     text-decoration: none;
 }
 
 .mailToMe a button {
     position: absolute;
-    left: 50%;
+    inset-inline-start: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
     font-size: 15px;
@@ -620,8 +629,8 @@ article p span {
     outline: none;
     background-color: #191923;
     color: #ffc107;
-    width: 80%;
-    height: 40%;
+    inline-size: 60%;
+    block-size: 40%;
     transition: all .5s;
 }
 
@@ -635,20 +644,20 @@ article p span {
 
 .rightSide {
     position: relative;
-    left: 92%;
-    width: 6%;
-    height: 100%;
+    inset-inline-start: 92%;
+    inline-size: 6%;
+    block-size: 100%;
     background-color: #20202a;
     text-align: center;
     transition: all 1s;
 }
 
 .blank {
-    width: 100%;
-    height: 100%;
+    inline-size: 100%;
+    block-size: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     z-index: -2;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.6);
@@ -661,8 +670,8 @@ article p span {
 }
 
 .rightSide header .openButton {
-    width: 100%;
-    height: 10%;
+    inline-size: 100%;
+    block-size: 10%;
     background-color: #242430;
     cursor: pointer;
     z-index: inherit;
@@ -671,7 +680,7 @@ article p span {
 
 .rightSide.show header .openButton {
     position: inherit;
-    width: 50%;
+    inline-size: 50%;
 }
 
 .rightSide header .rightSideInfo {
@@ -687,18 +696,18 @@ article p span {
 .rightSide.show {
     z-index: 1;
     position: relative;
-    left: 78%;
-    width: 20%;
+    inset-inline-start: 78%;
+    inline-size: 20%;
 }
 
 .rightSide main {
     position: absolute;
-    top: 14%;
+    inset-block-start: 14%;
 }
 
 .rightSide main ul li {
     color: #848487;
-    padding-top: 30px;
+    padding-block-start: 30px;
     font-size: 15px;
     opacity: 0;
     z-index: -2;
@@ -717,12 +726,12 @@ article p span {
 
 .rightSide footer .author {
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    inset-block-end: 0;
+    inset-inline-start: 50%;
     transform: translateX(-50%);
     background-color: #2c2c37;
-    width: 100%;
-    height: 0;
+    inline-size: 100%;
+    block-size: 0;
     font-size: 14px;
     border-radius: 50px 50px 0 0;
     color: #717175;
@@ -730,23 +739,41 @@ article p span {
 }
 
 .rightSide.show footer .author {
-    height: 65px;
+    block-size: 65px;
 }
 
 .author p a {
+    font-family: cursive;
     color: #c4c4c7;
     text-decoration: none;
 }
 
 @media screen and (max-width: 950px) {
     .leftSide {
+        inline-size: 50%;   
+        block-size: 94.2%;
+        opacity: 0;
+        z-index: -1;
+        transition: all 1s;
+    }
+    .leftSide.show {
+        z-index: 2;
+        opacity: 1;
+    }
+    .magnifier {
         display: none;
+    }
+    .languages {
+        display: none;
+    }
+    .abilities {
+        margin-block-start: -60px;
     }
     .middleSide {
         position: fixed;
-        left: 2%;
-        right: 2%;
-        width: 96%;
+        inset-inline-start: 2%;
+        inset-inline-end: 2%;
+        inline-size: 96%;
     }
     .middleSide main {
         background-image: url(images/mountain1.jpg);
@@ -758,21 +785,55 @@ article p span {
         display: none;
     }
     .middleSide main .mainTexts {
-        width: 100%;
+        inline-size: 100%;
     }
     .mainTexts strong {
         display: block;
-        width: 95%;
         text-align: center;
-        margin-top: 8%;
+        margin: 18% auto 0 auto;
         font-size: 60px;
         color: #fbfbfb;
+    }
+    .mobileShadow {
+        position: fixed;
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        inline-size: 100%;
+        block-size: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+        opacity: 0;
+        transition: all 1s;
+    }
+    .mobileShadow.show {
+        opacity: 1;
+        z-index: 2;
+    }
+    .biography {
+        position: relative;
+        z-index: 3;
+        font-size: 20px;
+        inline-size: 50%;
+        background-color: transparent;
+        border: none;
+        display: block;
+        margin: 15% auto 0 auto;
+        color: #fbfbfb;
+        animation: fever 2s infinite;
+        transition: all 1s;
+    }
+    .biography.show {
+        inline-size: 48%;
+        transform: translateX(57%);
+    }
+    .biography:active {
+        color: #ffc107;
     }
     .middleSide main .mainTexts p {
         display: none;
     }
     .educations section p {
-        margin-bottom: 30px;
+        margin-block-end: 30px;
     }
     .rightSide {
         display: none;
