@@ -1,4 +1,7 @@
 # CVProject
 my first project
-
-<iframe src="https://pouriamaleki.com/" title="pouria maleki personal website"></iframe>
+<object width="625" height="800">
+  <embed src="https://pouriamaleki.com/"
+         type="application/x-shockwave-flash"
+         wmode="transparent" width="625" height="800" />
+</object>
